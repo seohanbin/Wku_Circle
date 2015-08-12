@@ -5,5 +5,8 @@ class HomeController < ApplicationController
 
   end
 
+  def temporaryaction_delete
+
+  end
 
 end
