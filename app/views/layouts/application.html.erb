@@ -1,14 +1,38 @@
 <!DOCTYPE html>
-<html>
+<html lang="kr">
 <head>
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
   <title>WkuCircle</title>
+
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js"></script>
+
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+
+
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+  
 </head>
 <body>
 
 <%= yield %>
-
+<script type="text/javascript">
+    /* Typed
+        ================================================== */
+        $(".element").each(function(){
+            var $this = $(this);
+            $this.typed({
+            strings: $this.attr('data-elements').split(','),
+            typeSpeed: 100, // typing speed
+            backDelay: 3000 // pause before backspacing
+            });
+        });
+</script>
 </body>
 </html>
